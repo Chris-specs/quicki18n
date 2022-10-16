@@ -1,17 +1,28 @@
 // Common
-import { createContext, useCallback, useContext, useMemo } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 const I18NContext = createContext()
 
 export const QuickProvider = ({ locale, children }) => {
 
+    const [lang, setLang] = useState({})
+
     if (locale === undefined) {
         throw new Error('QuickProvider need receive a "locale" prop.')
     }
 
-    const lang = useMemo(() => require(`../../public/locales/${locale}.json`), [locale])
+    const getJSON = async () => {
+        const lang = await import(`../../../public/locales/${locale}/common.json`)
+        setLang(lang.default)
+    }
 
-    const t = useCallback(( key ) => lang[key], [locale])
+    useEffect(() => {
+        getJSON()
+        return () => {}
+    }, [locale])
+    
+
+    const t = useCallback(( key ) => lang[key], [lang])
 
     return (
         <I18NContext.Provider value={{ t }}>

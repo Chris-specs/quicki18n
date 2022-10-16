@@ -1,8 +1,8 @@
 {
     "name": "quicki18n-react",
-    "version": "1.0.2",
+    "version": "1.1.9",
     "description": "Translations fast and easy for React and NextJS projects.",
-    "main": "dist/index.js",
+    "main": "dist/index.es.js",
     "module": "dist/index.es.js",
     "type": "module",
     "scripts": {
