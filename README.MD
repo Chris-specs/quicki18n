@@ -53,4 +53,4 @@ const Component = () => {
 ```
 
 ## 
-Made with ❤️ by [Chris](https://github.com/Chris-specs) 
+Made with ❤️ & ⌨️ by [Chris](https://github.com/Chris-specs) 
