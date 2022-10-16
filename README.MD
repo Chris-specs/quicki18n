@@ -1,5 +1,7 @@
 # QuickI18N
 
+![logo](https://raw.githubusercontent.com/Chris-specs/quicki18n/main/media/readme-logo.png)
+
 Translations fast and easy for React and NextJS projects.
 
 ## Installation
