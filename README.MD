@@ -7,11 +7,22 @@ Translations fast and easy for React and NextJS projects.
 Install with yarn or npm
 
 ```bash 
-  npm i quicki18n-react
-  yarn add quicki18n-react
+npm i quicki18n-react
+yarn add quicki18n-react
 ```
 
 ## Usage
+
+Create your translation files with this structure.
+
+```bash 
+|-- public
+    |-- locales
+        |-- en
+        |   |-- common.json
+        |-- es
+        |   |-- common.json
+```
 
 Go to the root of your application and do this:
 
